@@ -1,0 +1,14 @@
+{
+  "name": "Narumi_Toa",
+  "description": "A first-year student at Sakuraei Academy, student council treasurer, and the younger sister of protagonist Narumi Yukiki. She appears lazy and lethargic on the surface, often speaking sharply to her brother, yet she deeply admires him inside. A gifted programmer capable of building an operating system from scratch, her dream is to make easy money while staying at home.",
+  "authors": [
+    "Madosoft (Original Work) / whoeye (Character Design) / Yuu Omiya (Scenario)",
+    "OvOla2 (Model Author)",
+    "Membrane_Skirt_Template authors: Othellophi, Pivoo (refactored skirt script to work with Membranes), manuel_2867 (Membrane Script), PirateSee & Andromeda59 (Original Skirt Script)",
+    "Select Action Wheel author: niko, the silly one",
+    "PhysBone API author: ChloeSpacedOut",
+    "Special thanks: Gakuto1112 for inspiration"
+  ],
+  "color": "#ffc400",
+  "autoScripts": ["script"]
+}
