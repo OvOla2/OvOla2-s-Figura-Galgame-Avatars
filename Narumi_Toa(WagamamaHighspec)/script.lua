@@ -211,10 +211,6 @@ local selector = mainPage:newSelect()
 local physBone = require("libraries.physBoneAPI")
 
 function events.entity_init()
-    -- ========================================
-    -- 物理骨骼已经在 Blockbench 中通过命名自动创建
-    -- 这里只需调整参数
-    -- ========================================
 
     -- 获取已自动创建的物理骨骼
     local bhl1 = physBone.physBoneBhl1
@@ -222,7 +218,6 @@ function events.entity_init()
     local bhl3 = physBone.physBoneBhl3
     local bhl4 = physBone.physBoneBhl4
 
-    -- 只增加刚性和阻尼，其他全部保持默认
     if bhl1 then
         bhl1:setSpringForce(0.8)
             :setAirResistance(0.3)
