@@ -211,40 +211,44 @@ local selector = mainPage:newSelect()
 local physBone = require("libraries.physBoneAPI")
 
 function events.entity_init()
+    -- ========================================
+    -- 物理骨骼已经在 Blockbench 中通过命名自动创建
+    -- 这里只需调整参数
+    -- ========================================
+
+    -- 获取已自动创建的物理骨骼
     local bhl1 = physBone.physBoneBhl1
     local bhl2 = physBone.physBoneBhl2
     local bhl3 = physBone.physBoneBhl3
     local bhl4 = physBone.physBoneBhl4
 
+    -- 只增加刚性和阻尼，其他全部保持默认
     if bhl1 then
         bhl1:setSpringForce(0.8)
             :setAirResistance(0.3)
-            :setNodeRadius(0.5)  -- 调大碰撞体积
+            :setNodeEnd(2)
+            :setNodeRadius(0.5)
     end
 
     if bhl2 then
         bhl2:setSpringForce(0.6)
             :setAirResistance(0.35)
-            :setNodeRadius(0.4)
+            :setNodeEnd(2)
+            :setNodeRadius(2.6)
     end
 
     if bhl3 then
         bhl3:setSpringForce(0.4)
             :setAirResistance(0.4)
-            :setNodeRadius(0.3)
+            :setNodeEnd(2)
+            :setNodeRadius(2)
     end
 
     if bhl4 then
         bhl4:setSpringForce(0.2)
             :setAirResistance(0.45)
-            :setNodeRadius(0.25)
-    end
-
-    -- 注册碰撞体（防止头发穿透背部）
-    -- 在 Blockbench 中创建colliderBack
-    local backCollider = models.main.root.Body.backCollider
-    if backCollider then
-        physBone:newCollider(backCollider)
+            :setNodeEnd(2)
+            :setNodeRadius(1)
     end
 end
 
