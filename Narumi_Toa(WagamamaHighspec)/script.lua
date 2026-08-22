@@ -179,7 +179,7 @@ action_wheel:setPage(mainPage)
 
 -- 创建选择器 Action
 local selector = mainPage:newSelect()
-    :setTitle({text = "选择表情", color = "#00FFFF"})   -- 标题
+    :setTitle({text = "Select_expression", color = "#00FFFF"})   -- 标题
     :setItem("minecraft:player_head")                    -- 可选的图标
     -- 添加所有表情选项
     :addChoice("Joy")
